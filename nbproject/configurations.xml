@@ -12,7 +12,7 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>main.cpp</itemPath>
+      <itemPath>Tarea06ISW2014.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -38,13 +38,14 @@
         <ccTool>
           <incDir>
             <pElem>/usr/include/curl</pElem>
+            <pElem>/usr/include/libxml2/libxml</pElem>
           </incDir>
         </ccTool>
         <linkerTool>
-          <commandLine>-lcurl</commandLine>
+          <commandLine>-lcurl -lxml2 -I/usr/include/libxml2</commandLine>
         </linkerTool>
       </compileType>
-      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      <item path="Tarea06ISW2014.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -67,7 +68,7 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      <item path="Tarea06ISW2014.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
   </confs>

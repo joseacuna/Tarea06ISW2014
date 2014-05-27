@@ -35,7 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/main.o
+	${OBJECTDIR}/Tarea06ISW2014.o
 
 
 # C Compiler Flags
@@ -60,12 +60,12 @@ LDLIBSOPTIONS=
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/tarea06isw2014: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/tarea06isw2014 ${OBJECTFILES} ${LDLIBSOPTIONS} -lcurl
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/tarea06isw2014 ${OBJECTFILES} ${LDLIBSOPTIONS} -lcurl -lxml2 -I/usr/include/libxml2
 
-${OBJECTDIR}/main.o: main.cpp 
+${OBJECTDIR}/Tarea06ISW2014.o: Tarea06ISW2014.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include/curl -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+	$(COMPILE.cc) -g -I/usr/include/curl -I/usr/include/libxml2/libxml -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Tarea06ISW2014.o Tarea06ISW2014.cpp
 
 # Subprojects
 .build-subprojects:
